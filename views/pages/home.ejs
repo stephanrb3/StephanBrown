@@ -1,0 +1,800 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta http-equiv="content-script-type" content="text/javascript">
+	<meta http-equiv="content-style-type" content="text/css">
+	<meta http-equiv="content-language" content="nl">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="author" content="Stephan Brown">
+	<meta name="description" content="I&#39;m Stephan Brown, an engineer with a knack for all things tech.">
+	<meta name="keywords" content="Stephan Brown, Stephan, Brown, Interactive Resume, programmer, Web developer, 
+	Startup, Interactive CV, Resume, CV, Hireme, Ai, Developer, Stephan R. Brown, Actor, NLP, Postgres, Heroku,
+	HRMatches, Algorithms, games, game design, Machine Learning, Yeet, MySQL, OOP">
+	<meta name="robots" content="index, follow">
+	<meta name="revisit-after" content="10 days">
+	<title>Stephan Brown</title>
+    
+	<!-- Fonts, Fontawesome Bootstrap, Core CSS, -->
+	<link href="../../stylesheets/fonts.css" rel="stylesheet" type="text/css" />
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+	<link href="../../stylesheets/bootstrap.min.css" rel="stylesheet" />
+	<link href="../../stylesheets/style.css" rel="stylesheet" type="text/css" />
+	
+	<!-- <script type="text/javascript" src="../../scripts/headlines.js"></script> -->
+	<script src="/socket.io/socket.io.js"></script>
+
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-104174322-1"></script>
+	<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+
+	gtag('config', 'UA-104174322-1');
+	</script>
+
+</head>
+<body data-gr-c-s-loaded="true" data-spy="scroll" data-target="#navbar-example" style="background-color: #1D1F22">
+
+<div class="jumbotron" id="top" style="height: 901px;">
+	<div class="container">
+		<h1>Stephan Brown</h1>
+		
+		<p>&ldquo;There are things known and there are things unknown, 
+			and in between are the doors of perception.&rdquo;<br />
+		- Aldous Huxley</p>
+		<br>
+		<p id="lol">...You should probably scroll down</p>
+		<div class="row">
+			<ul class="no-bullets">
+				<span> <li><a href="http://twitter.com/SteveRanThatWay" target="_blank"> 
+						<img id="twitterico" src="images/twitter-256.ico" alt="twitter">
+				</a></li></span>
+				<span><li><a href="http://linkedin.nl/in/stephan-brown-36919285/" target="_blank">
+						<img id="linkedIn" src="images/Linkedin_Shiny_Icon.svg.png" alt="linkedin dev">
+				</a></li></span>
+			</ul>
+		</div>
+
+	</div>
+	<div class="overlay"></div>
+
+	<a href="#profile" class="scroll-down">	
+		<span class="glyphicon glyphicon-chevron-down"></span>
+	</a>
+</div>
+
+<nav class="navbar navbar-default" id="navbar-example" role="navigation"><!-- Brand and toggle get grouped for better mobile display -->
+<div class="navbar-header">
+		<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+		<span class="sr-only">Toggle navigation</span>
+		<span class="icon-bar"></span>
+		<span class="icon-bar"></span>
+		<span class="icon-bar"></span>
+		</button>
+</div>
+<!-- Collect the nav links, forms, and other content for toggling -->
+
+<div class="collapse navbar-collapse navbar-ex1-collapse">
+<ul class="nav navbar-nav">
+	<li class="active"><a href="#profile">Profile</a></li>
+	<li><a href="#abilities">Skills</a></li>
+	<li><a href="#experiences">Experiences</a></li>
+	<li><a href="#ML">Machine Learning</a></li>
+	<li><a href="#groups">Groups</a></li>
+	<li><a href="#Hobbies">Hobbies</a></li>
+	<li><a href="#contact">Contact</a></li>
+</ul>
+</div>
+<!-- /.navbar-collapse --></nav>
+
+<!-- <div class="background-white"> -->
+<div class="container" id="profile">
+	<h2>Profile</h2>
+
+	<p class="lead">Machine Learning Engineer and Researcher in NYC</p>
+
+	<hr />
+	<div class="row">
+		<div class="col-md-4">
+		<h3>About me</h3>
+
+		<p>I want to explore the frontiers of science and engineering to help make the world a better place.
+			 My greatest passions are technology, inclusion, and service. So far I think I've been doing a good job 
+			 of using my skills to help with that.  
+		</p>
+		</div>
+
+		<div class="col-md-4 text-center"><img alt="Stephan" height="246" src="images/Selfie.png" width="246" /></div>
+
+		<div class="col-md-4">
+			<h3>Details</h3>
+
+			<p><strong>Name:</strong><br />
+			Stephan R. Brown<br />
+			
+			<strong>Location:</strong><br />
+			Manhattan, New York</p>
+		</div> 
+	</div>
+</div>
+<!-- </div> -->
+
+
+<!-- skills and abilities -->
+<div class="background-purple">
+	<div class="container" id="abilities">
+		<h2>Skills</h2>
+
+		<p class="lead">&ldquo;Live as if your were to die tomorrow. Learn as if you were to live forever.&rdquo;<br />
+		- Gandhi</p>
+		<hr />
+		<div class="row">
+			<div id="skill-list">
+				<ul class="no-bullets">
+				
+
+					<li class="skill-dropdown" onclick="ExpandSkill13()">
+						<span class="ability-title">Python</span>
+						<span class="ability-score">						
+						<span class="glyphicon glyphicon-star filled"></span>													
+						<span class="glyphicon glyphicon-star filled"></span>								
+						<span class="glyphicon glyphicon-star filled"></span>												
+						<span class="glyphicon glyphicon-star filled"></span>								
+						<span class="glyphicon glyphicon-star filled"></span>			
+						</span>
+					</li>
+
+					<li class="skill-description" id="PY">
+						<p> Python was actually the first language I learned back in middle school. Now I specialize in using it for 
+						data science and machine learning.
+						</p>
+					</li>
+					<li class="skill-dropdown" onclick="ExpandSkill15()">
+							<span class="ability-title">Machine Learning</span>
+							<span class="ability-score">						
+							<span class="glyphicon glyphicon-star filled"></span>													
+							<span class="glyphicon glyphicon-star filled"></span>								
+							<span class="glyphicon glyphicon-star filled"></span>												
+							<span class="glyphicon glyphicon-star filled"></span>								
+							<span class="glyphicon glyphicon-star filled"></span>			
+							</span>
+						</li>
+	
+						<li class="skill-description" id="MLS">
+							<p> I've been doing Machine Learning for over 2 years now, and have several publications on the topic.
+							</p>
+						</li>
+					<li class="skill-dropdown" onclick="ExpandSkill16()">
+								<span class="ability-title">Natural Language Processing</span>
+								<span class="ability-score">						
+								<span class="glyphicon glyphicon-star filled"></span>													
+								<span class="glyphicon glyphicon-star filled"></span>								
+								<span class="glyphicon glyphicon-star filled"></span>												
+								<span class="glyphicon glyphicon-star filled"></span>								
+								<span class="glyphicon glyphicon-star filled"></span>			
+								</span>
+						</li>
+		
+						<li class="skill-description" id="nlp">
+								<p> I've built and worked with a handful of state of the art NLP pipelines.	</p>
+						</li>
+					<li class="skill-dropdown" onclick="ExpandSkill()">
+						<span class="ability-title">C#</span>
+						<span class="ability-score">						
+						<span class="glyphicon glyphicon-star filled"></span>													
+						<span class="glyphicon glyphicon-star filled"></span>								
+						<span class="glyphicon glyphicon-star filled"></span>												
+						<span class="glyphicon glyphicon-star filled"></span>								
+						<span class="glyphicon glyphicon-star filled"></span>			
+						</span>
+					</li>
+					
+					<li class="skill-description" id="Csharp">
+						<p>C# is a very fun language for me, I use it often with Unity</p>
+					</li>
+
+
+					<!-- <li class="skill-dropdown" onclick="ExpandSkill2()">
+						<span class="ability-title">Adobe Illustrator</span>
+						<span class="ability-score">						
+						<span class="glyphicon glyphicon-star filled"></span>													
+						<span class="glyphicon glyphicon-star filled"></span>								
+						<span class="glyphicon glyphicon-star filled"></span>												
+						<span class="glyphicon glyphicon-star filled"></span>								
+						<span class="glyphicon glyphicon-star filled"></span>			
+						</span>
+					</li>
+
+					<li class="skill-description" id="Illi">
+						<p>I first learned Adobe Illustrator after high school, and I fell in love with it.
+							I've made dozens of flyers and game assets on the fly using Adobe Illustrator. 
+							<a href="https://1drv.ms/f/s!AlmljFmmlE9zrA2NApXxK8g1bWKu">Here's</a> some examples from this past year.
+						</p>
+					</li> -->
+
+
+					<li class="skill-dropdown" onclick="ExpandSkill3()">
+						<span class="ability-title">HTML</span>
+						<span class="ability-score">						
+						<span class="glyphicon glyphicon-star filled"></span>													
+						<span class="glyphicon glyphicon-star filled"></span>								
+						<span class="glyphicon glyphicon-star filled"></span>												
+						<span class="glyphicon glyphicon-star filled"></span>								
+						<span class="glyphicon glyphicon-star filled"></span>			
+						</span>
+					</li>
+
+					<li class="skill-description" id="HTML">
+						<p>Well, my website should speak for itself.</p>
+					</li>
+<!-- 
+
+					<li class="skill-dropdown" onclick="ExpandSkill4()">
+						<span class="ability-title">Adobe Photoshop</span>
+						<span class="ability-score">						
+						<span class="glyphicon glyphicon-star filled"></span>													
+						<span class="glyphicon glyphicon-star filled"></span>								
+						<span class="glyphicon glyphicon-star filled"></span>												
+						<span class="glyphicon glyphicon-star filled"></span>								
+						<span class="glyphicon glyphicon-star"></span>			
+						</span>
+					</li>
+
+					<li class="skill-description" id="Psb">
+						<p>I know Photoshop almost as well as Illustrator, 
+							I like to find creative ways to use the two of them together. 
+						</p>
+					</li> -->
+
+
+					<li class="skill-dropdown" onclick="ExpandSkill5()">
+						<span class="ability-title">C++</span>
+						<span class="ability-score">						
+						<span class="glyphicon glyphicon-star filled"></span>													
+						<span class="glyphicon glyphicon-star filled"></span>								
+						<span class="glyphicon glyphicon-star filled"></span>												
+						<span class="glyphicon glyphicon-star filled"></span>								
+						<span class="glyphicon glyphicon-star"></span>			
+						</span>
+					</li>
+
+					<li class="skill-description" id="Cplus">
+						<p>C++ is the language I use most often for classes and coding projects
+							I've recieved a 4.0 gpa in both Intro and Advanced C++ courses.
+						</p>
+					</li>
+
+
+					<li class="skill-dropdown" onclick="ExpandSkill6()">
+						<span class="ability-title">Unity</span>
+						<span class="ability-score">						
+						<span class="glyphicon glyphicon-star filled"></span>													
+						<span class="glyphicon glyphicon-star filled"></span>								
+						<span class="glyphicon glyphicon-star filled"></span>												
+						<span class="glyphicon glyphicon-star filled"></span>								
+						<span class="glyphicon glyphicon-star "></span>			
+						</span>
+					</li>
+
+					<li class="skill-description" id="Unity">
+						<p>Videogames are a passion of mine, so I started using Unity to make games years ago.
+							Nothing beats a fun game jam with some close friends.
+						</p>
+					</li>
+
+
+					<li class="skill-dropdown" onclick="ExpandSkill7()">
+						<span class="ability-title">CSS</span>
+						<span class="ability-score">						
+						<span class="glyphicon glyphicon-star filled"></span>													
+						<span class="glyphicon glyphicon-star filled"></span>								
+						<span class="glyphicon glyphicon-star filled"></span>												
+						<span class="glyphicon glyphicon-star filled"></span>								
+						<span class="glyphicon glyphicon-star"></span>			
+						</span>
+					</li>
+
+					<li class="skill-description" id="Casss">
+						<p>I used a lot of CSS to style this website and bootstrap to make
+							it responsive.
+						</p>
+					</li>
+
+
+					<li class="skill-dropdown" onclick="ExpandSkill8()">
+						<span class="ability-title">Visual Studio</span>
+						<span class="ability-score">						
+						<span class="glyphicon glyphicon-star filled"></span>													
+						<span class="glyphicon glyphicon-star filled"></span>								
+						<span class="glyphicon glyphicon-star filled"></span>												
+						<span class="glyphicon glyphicon-star filled"></span>								
+						<span class="glyphicon glyphicon-star "></span>			
+						</span>
+					</li>
+
+					<li class="skill-description" id="VS">
+						<p>Visual Studio is my IDE of choice.
+							I used VS code as my text editor for this site actually.
+							Visual Studio has been the main IDE for most of my CS classes and projects thus far</p>
+					</li>
+
+
+					<li class="skill-dropdown" onclick="ExpandSkill9()">
+						<span class="ability-title">Amazon Web Services</span>
+						<span class="ability-score">						
+						<span class="glyphicon glyphicon-star filled"></span>													
+						<span class="glyphicon glyphicon-star filled"></span>								
+						<span class="glyphicon glyphicon-star filled"></span>												
+						<span class="glyphicon glyphicon-star filled"></span>								
+						<span class="glyphicon glyphicon-star"></span>			
+						</span>
+					</li>
+
+					<li class="skill-description" id="OOP">
+						<p> Became a Sagemaker pro when I created an end-to-end machine learning and natural language understanding 
+						pipeline for news curation and classification </p>
+					</li>
+
+					<li class="skill-dropdown" onclick="ExpandSkill12()">
+							<span class="ability-title">Javascript</span>
+							<span class="ability-score">						
+							<span class="glyphicon glyphicon-star filled"></span>													
+							<span class="glyphicon glyphicon-star filled"></span>								
+							<span class="glyphicon glyphicon-star filled"></span>												
+							<span class="glyphicon glyphicon-star filled"></span>								
+							<span class="glyphicon glyphicon-star"></span>			
+							</span>
+						</li>
+	
+						<li class="skill-description" id="JS">
+							<p>I used Javascript on this website, I've also used JS in web and mobile apps. I love React</p>
+						</li>
+						
+					<li class="skill-dropdown" onclick="ExpandSkill10()">
+						<span class="ability-title">ETL Pipelines</span>
+						<span class="ability-score">						
+						<span class="glyphicon glyphicon-star filled"></span>													
+						<span class="glyphicon glyphicon-star filled"></span>								
+						<span class="glyphicon glyphicon-star filled"></span>												
+						<span class="glyphicon glyphicon-star"></span>								
+						<span class="glyphicon glyphicon-star"></span>			
+						</span>
+					</li>
+
+					<li class="skill-description" id="PM">
+						<p>Experience building/operating highly available, distributed systems of data extraction, 
+							ingestion, and processing of large data sets.
+						</p>
+					</li>
+
+
+					<li class="skill-dropdown" onclick="ExpandSkill14()">
+						<span class="ability-title">SQL</span>
+						<span class="ability-score">						
+						<span class="glyphicon glyphicon-star filled"></span>													
+						<span class="glyphicon glyphicon-star filled"></span>								
+						<span class="glyphicon glyphicon-star filled"></span>												
+						<span class="glyphicon glyphicon-star"></span>								
+						<span class="glyphicon glyphicon-star"></span>			
+						</span>
+					</li>
+
+					<li class="skill-description" id="SQL">
+						<p> I first learned SQL for a Database Management course, and have used in various projects.</p>
+					</li>
+
+					<li class="skill-dropdown" onclick="ExpandSkill17()">
+							<span class="ability-title">Hadoop</span>
+							<span class="ability-score">						
+							<span class="glyphicon glyphicon-star filled"></span>													
+							<span class="glyphicon glyphicon-star filled"></span>	
+							<span class="glyphicon glyphicon-star"></span>												
+							<span class="glyphicon glyphicon-star"></span>												
+							<span class="glyphicon glyphicon-star"></span>																				
+							</span>
+						</li>
+	
+						<li class="skill-description" id="hadoop">
+							<p> I've been able to work with hadoop, spark, and mahout on a few different projects and I'm growing
+								more comfortable using them.
+							</p>
+						</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- container end -->
+
+<!-- container exp -->
+<div>
+	<div class="container" id="experiences">
+		<h2>Experiences</h2>
+
+		<p class="lead">&ldquo;I do believe in the power of story.
+		 I believe that stories have an important role to
+		 play in the formation of human beings, that they can 
+		  stimulate, amaze and inspire their listeners. &rdquo;<br />
+	- Hayao Miyazaki</p>
+
+		<hr>
+		<h3>Education</h3>
+
+		<div class="exp">
+			<div class="row">
+				<div class="col-md-3 col-xs-12"> <img src="images/sclogo.jpeg" height="100px" width="100px" alt="schoolcraft college logo"></div>
+				<div class="col-md-8 col-xs-12">
+					<h4>Schoolcraft College</h4>
+					<p>Associates of Science</p>
+					<p>September 2014 - May 2017</p>
+				</div>
+			</div>		
+				<br>
+			<div class="row">
+				<div class="col-md-3 col-xs-12"> <img src="images/nyitlogo.png" height="100px" width="100px" alt="New York Institute of Tech logo"></div>
+				<div class="col-md-8 col-xs-12">
+					<h4>New York Institute of Technology</h4>
+					<p>Bachelors of Computer Science</p>
+					<p>September 2017 - December 2019</p>
+				</div>
+			</div>
+		</div>
+	
+		<hr />
+
+		<h3>Careers</h3>
+		<div class="exp">
+				<div>
+						<h4>New York Institue of Technology | Machine Learning and Virtual Reality Researcher</h4>
+		
+						<p>October 2017 - Present</p>
+							<ul>
+								<li>Built a VR application optimized for experiments to mitigate Virtual Reality Sickness</li>
+								<li>Designed a novel Python deep learning pipeline for adversarial text generation</li>
+								<li>Lead a team of my peers to accomplish engineering tasks and publish papers</li>
+							</ul>
+					</div>
+				</div>
+
+		<div class="exp">
+			<div>
+				<h4>Public Good Software | Machine Learning Engineer</h4>
+
+				<p>May 2019 - August 2019</p>
+					<ul>
+						<li>Built an end-to-end deep learning pipeline for content curation of news articles in connect to brand campaigns.</li>
+						<li>Implemented several deep learning models utilizing BERT and XLNET which achieved over 92% accuracy on NLP classification tasks.</li>
+						<li>Served the model into production on AWS Sagemaker.</li>
+					</ul>
+			</div>
+		</div>
+
+		<div class="exp">
+			<div>
+				<h4>Where Thoughts Go | Programmer</h4>
+
+				<p>Feb 2018 - August 2018</p>
+					<ul>
+						<li>Prototyping experimental features for an immersive Virtual Reality experience called “Where Thoughts Go” using C++ and Visual Studio</li>
+					</ul>
+			</div>
+		</div>
+ 
+		<hr>
+
+		<h3>Publications</h3>
+
+		<div class="exp">
+			<div>
+				<h4>Adversarial Text Generation for Google Perspective</h4>
+
+				<p>Abstract</p>
+				<p>With the preponderance of harassment and abuse, social media platforms and online discussion platforms seek to curb toxic comments. 
+				Google’s Perspective aims to help platforms classify toxic comments. We have created a pipeline to modify toxic comments to evade Perspective. 
+				This pipeline uses existing adversarial machine learning attacks to find the optimal perturbation which will evade the model. 
+				Since these attacks typically target images, as opposed to discrete text data, we include a process to generate text candidates from perturbed features and
+				select candidates to retain syntactic similarity. We demonstrated that using a model with just 10,000 queries, changing three words in 
+				each comment evades Perspective 25\% of the time, suggesting that building a 
+				surrogate model may not require many queries and a more robust approach is needed to improve the toxic comment classifier accuracy.</p>
+				<p>Presented at CSCI 2018</p>
+			</div>
+		</div>
+
+		<br>
+		<div class="exp">
+			<div>
+				<h4>Using Data Science to Facilitate Civic Action</h4>
+
+				<p>Abstract</p>
+				<p>Public Good Software (PGS) makes the news actionable: we connect readers, publishers, NGOs, and brands
+				 to address social causes, including the UN Sustainable Development Goals. The common element is news content, which 
+				 we analyze to pair a given article with a relevant social cause. In turn, we provide a set of actions readers can 
+				 take to help the cause. News content analysis is a labor-intensive process. We employ text-matching, natural 
+				 language processing, and machine learning to quickly and efﬁciently pair articles with relevant social causes.
+				  In this paper we describe the evolution of the PGS platform, which employs data science to facilitate civic action 
+				  and engagement.</p>
+
+				<p>Presented at Bloomberg Data for Good Exchange</p>
+			</div>
+		</div>
+
+		<div class="exp">
+				<div>
+					<h4>Acoustic and Visual Approaches to Adversarial Text Generation for Google Perspective</h4>
+	
+					<p>Abstract</p>
+					<p>Google's Perspective API was introduced to help detect and classify toxic comments in online platforms.
+						 Adversarial machine learning attacks can decrease the effectiveness of Perspective in identifying toxic comments. 
+						  We have shown in our previous study that by applying a semantic-based attack to a surrogate model trained with just 
+						  10,000 queries we could produce adversarial examples which evade Perspective 25% of the time.
+						In this paper, we propose two new approaches to generate adversarial text to evade Google's Perspective, 
+						   one based on acoustic similarity and the other based on visual similarity. We tested the success rate of obfuscation in 
+						   Google Perspective using the  adversarial texts generated through the proposed approaches and showed that Google Perspective
+						misclassified the generated texts 33% and 72.5% of the time for the visual-based and acoustic-based approaches, respectively. The study aims to broaden the understanding of adversarial text generation and to improve the robustness for online toxic comment detection for a safe online community. %We hope Google Perspective can train on the new adversarial samples 
+						produced within these attack scenarios in our optimized approach to further improve it's robustness. </p>
+	
+					<p>Presented at CSCI 2019 and soon to be published in IEEExplore</p>
+				</div>
+		</div>
+
+
+		<h3>Accomplishments</h3>
+		<div id="myCarousel" class="carousel slide" data-ride="carousel">
+		
+				<!-- Indicators -->
+			<ol class="carousel-indicators">
+				<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+				<li data-target="#myCarousel" data-slide-to="1"></li>
+				<li data-target="#myCarousel" data-slide-to="2"></li>
+				<li data-target="#myCarousel" data-slide-to="3"></li>
+				<li data-target="#myCarousel" data-slide-to="4"></li>
+			</ol>
+
+			<!-- Wrapper for slides -->
+			<div class="carousel-inner">
+				<div class="item active">
+					<div class="slideshowcontainer">
+						<h4 class="slidehead">Published in "All the Weight of our Dreams On Living Racialized
+							Autism"</h4>
+						<p style="text-align:center">You can purchase the book 
+							<a href="https://www.amazon.com/dp/0997504501/ref=cm_sw_r_cp_api_3XfszbDDTXZJS">here</a>
+						</p>
+						<img class="slideImg" src="images/autism.jpg" width="38%" height="38%" id="asd" alt="autism book">
+					</div>
+				</div>
+
+				<div class="item">
+					<div class="slideshowcontainer">
+						<h4 class="slidehead"> Elected and Served as President of the Phi Theta Kappa Michigan Region 2016-2017 </h4>
+						<img class="slideImg" src="images/PTKGable.jpg" width="90%" height="90%" id="Gable" alt="Phi Theta Kappa picture">	
+					</div>
+				</div>
+				
+				<div class="item">
+					<div class="slideshowcontainer">
+						<h4 class="slidehead">Awarded Best News Article of 2016 by the Michigan Press Association</h4>
+						<img class="slideImg" src="images/MPAbadge.png" width="45%" height="45%" id="MPA" alt="Michigan Press association">
+					</div>
+				</div>
+
+				<div class="item">
+					<div class="slideshowcontainer">
+						<h4 class="slidehead"> Won Best Line of Dialogue at 2017 Schoolcraft 48-hour film challenge</h4>
+						<div  id="ClimateWrapper">
+							<iframe width="100%" height="100%" src="https://www.youtube.com/embed/S2X_DtqyKJE"
+							frameborder="0" allowfullscreen></iframe>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- Left and right controls -->
+			 <a class="left carousel-control" href="#" data-slide="prev"
+			  	onclick="$('#myCarousel').carousel('prev')">
+				<span class="glyphicon glyphicon-chevron-left"></span>
+				<span class="sr-only">Previous</span>
+			</a>
+			<a class="right carousel-control" href="#" data-slide="next" 	
+				onclick="$('#myCarousel').carousel('next')">
+				<span class="glyphicon glyphicon-chevron-right"></span>
+				<span class="sr-only">Next</span>
+			</a> 
+
+		</div>
+	</div>
+</div>
+<!-- //container end-->
+
+
+
+<!-- NEW ML STUFF -->
+<div class="background-purple">
+		<div class="container" id="ML">
+			<h2>Machine Learning</h2>
+			<p class="lead">&ldquo;I'd rather see artificial intelligence than no intelligence.&rdquo;<br />
+			- Michael Crichton</p>
+			<div id="Classifier">
+				<p id="groupTagline" style="font-size: 16.5px; color: white;"> This news classifier was
+					trained on just 20,000 headlines with Tensorflow js and has recognizes 5 categories:
+					<span><b>Entertainment</b>, <b>Politics</b>, <b>Travel</b>, <b>Wellness</b>, and <b>Style&Beauty</b>.</span>
+					It queries todays top headlines from the Google News API and runs them through my 
+					ML model on my server. You can see the results here! 
+				</p>
+				<div id="loader"></div>
+				<p id="Load" style="color: antiquewhite; text-align:center;">Loading</p>
+				
+				<div class="MLbox">
+						<p id="Headline" style="color: antiquewhite; text-align:center;">Headline</p>
+				</div>
+				<div class="MLbox">	
+					<p id="Class" style="color: antiquewhite; text-align:center;">classification</p>
+				</div>
+				<h6 style="text-align: center; color: white;">Powered by NewsAPI.org<h6></h6>
+			</div>
+		</div>
+	</div>
+
+<!-- groups -->
+<div>
+	<div class="container" id="groups">
+		<h2>Groups</h2>
+
+		<p class="lead">&ldquo;The purpose of life is not to be happy. 
+			It is to be useful, to be honorable, to be compassionate, 
+			to have it make some difference that you have lived and lived well.&rdquo;<br />
+		- Ralph Waldo Emerson</p>
+		<hr class="hrgroupl">
+		<p id="groupTagline" style="font-size: 16.5px;"> I love working with others to make a difference! <br>Here's some of the organizations 
+				I've been a part over the past few years. </p>
+		<hr class="hrgroupl">
+		<br>
+
+		<div id='area'>
+			<h3>Former President and Founder of Passion2Progress</h3>
+			<div class="leftTriangle"></div><div class="rightTriangle"></div>
+				<p>As soon as I started at NYIT I founded Passion2Progress. I had been a student leader in many 
+						different organizations throughout my college career, but this was my first time building one from the ground up. Our goal was simple, improve 
+						our communities through service projects like tech and media consultancies. We grew to nearly 100 members, built websites and apps for non-profits
+						like Collegiate Internationals with the United Nations, St. Phillips Church, CHADD, and many more.
+				</p>
+			<br>
+			<h3>Former President of Schoolcraft Sexuality and Gender Acceptance (SAGA)   </h3>
+			<div class="leftTriangle"></div><div class="rightTriangle"></div>
+				<p>	While I was President of SAGA I began a recruitment campaign that gathered
+					over a 100 new members and transformed it into one of the largest student organizations at Schoolcraft College.
+					I then worked with the student body and school administrators to draft a proposal which updated the discrimination policy
+					to include gender identity. It also layed out other sweeping reforms to create a safer campus for trans students.
+					We also raised significant funds over the course of the year through major events like our drag showand 
+					 wellness fair. 
+				</p>
+			<br>
+			<!-- <h3>Former Staff Writer at Schoolcraft Connection  </h3>
+			<div class="leftTriangle"></div><div class="rightTriangle"></div>
+				<p>	I had a knack for writing, so I joined Schoolcraft's newspaper.
+					I mostly wrote video game reviews for art and entertainment, I ended getting awarded best news article of 2016
+					by the Michigan Press Association for my news article on CRISPR research and other emerging technologies.
+				</p> -->
+			<h3> Phi Theta Kappa "Omicron Iota" Alumnus  </h3>
+			<div class="leftTriangle"></div><div class="rightTriangle"></div>
+					<p>	The four pillars of Phi Theta Kappa are Service, Scholarship, Leadership, and Fellowship.
+						Naturally, as President of the Michigan Region, I worked hard to pursue these qualities
+						as well as to create programming to foster them in others. As President, I oversaw operations which
+						which impacted over 15,000 members, organized conferences with hundreds of attendees, and traveled 
+						the state giving guidance to chapters as well as doing keynote speeches for large audiences.
+					</p>
+			<!-- <h1>Volunteer at ObjectiveZero</h1>
+			<div class="leftTriangle"></div><div class="rightTriangle"></div>
+				<p>Roughly 20 Veterans and one current service member take their lives every day, at a rate that is over twice that of non-Veterans. I've been
+					helping by use my NLP skills to contribute to the ObjectiveZero platform and build a robust ML based application for suicide prevention.
+				</p> -->
+		</div>
+
+	</div>
+</div>
+
+
+<!-- My game -->
+ <div class="background-purple" id="Hobbies">
+	<h2 style="color: white;">Sometimes I make small games for fun!</h2>
+		<div class="container">
+			<div class="video-container">
+					<iframe src="PCWebAlpha/index.html" style="border:0px #000000 none;" name="Perfect Cirle" 
+					scrolling="no" frameborder="0" height="100%" width="100%">
+					</iframe>	
+			</div>			
+		</div>
+	<h2 style="color: white;">I have a lot of other interests too.</h2>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-4">
+					<h4>Fencing</h4>
+					<p>A couple years ago I discovered fencing and I really enjoy both participating in and
+						watching fencing. Maintaining stances in Fencing for long periods of time is strenuous and 
+						helps train my discipline and patience.
+					</p>
+					<img alt="Stephan" height="246" src="images/fencing-logo.png" width="246" alt="fencing" />
+				</div>
+				<div class="col-md-4">
+					<h4>Film and Camera</h4>
+					<p>Acting and Modeling is a fun pastime of mine. I've starred in a few feature films, have participated
+						in various photoshoots, walked for a runway show, and have taken acting courses. These experiences are 
+						also great practice for my communication skills.
+					</p>
+					<img alt="Stephan" height="246" src="images/film.png" width="246" alt="actor and model"/>
+				</div>
+				<div class="col-md-4">
+					<h4>Japanese</h4>
+					<p>I'm currently studying Japanese, My goal is to be fluent in Japanese within a few years. I've always
+						dreamed of an extended stay in Japan. Learning Japanese will also help me connect with coders from Japan.
+					</p>
+					<img alt="Stephan" height="246" src="images/nihon.png" width="246" alt="otaku"/>
+				</div>		
+			</div>
+		</div>
+ </div>
+
+
+<!-- contact -->
+<div >
+	<div class="container" id="contact">
+	<h2>Contact</h2>
+
+	<!-- <p class="lead"></p> -->
+
+	<ul class="no-bullets">
+
+	<hr />
+		<div id="contactlist" style="margin-left: 44%;">
+			<ul class="no-bullets" >
+				<li><a href="http://twitter.com/SteveRanThatWay" target="_blank">
+					<span>
+						<img id="twitterico2" src="images/twitter-256.ico">
+					 Twitter 
+					</span>
+					</a>
+				</li>
+				<span><li>
+					<a href="https://github.com/stephanrb3" target="_blank">
+							<img id="linkedIn2" src="images/GitHub-Mark.png">
+						 Github 
+					</a>	
+				</li></span>
+				<span><li>
+					<a href="http://linkedin.nl/in/stephan-brown-36919285/" target="_blank">
+							<img id="linkedIn2" src="images/Linkedin_Shiny_Icon.svg.png">
+						 LinkedIn 
+					</a>	
+				</li></span>
+				<li><a href="mailto:stephanrb3@gmail.com?" target="_top">stephanrb3@gmail.com</a></li>
+			</ul>
+		</div>
+		<hr />	
+	</div>
+</div>
+
+<!-- Core JavaScript, tensorflow, jquery, and bootstrap -->
+<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs/dist/tf.min.js"> </script>
+<script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/universal-sentence-encoder"></script>
+<script type=text/javascript src="../../scripts/jquery-latest.min.js"></script>
+<!-- <script type="text/javascript" src="../../scripts/encoder.js"></script> -->
+<!-- <script type="text/javascript" src="../../scripts/jquery.min.js.download"></script> -->
+<script type="text/javascript" src="../../scripts/script.js"></script>
+<script type="text/javascript" src="../../scripts/bootstrap.min.js"></script>
+
+<!-- news classifier script -->
+<script>
+	window.onload = function() {
+		var s = document.createElement('script');
+		s.type = 'text/javascript';
+		s.async = true;
+		s.src = "../../scripts/headlines.js";
+		var x = document.getElementsByTagName('script')[0];
+		x.parentNode.insertBefore(s, x);
+	}
+</script>
+<!-- Google Analytics will go here-->
+
+<h6 style="text-align: center; color: white;">Copyright&copy;Stephan Brown 2020<h6></h6>
+</body>
+</html>

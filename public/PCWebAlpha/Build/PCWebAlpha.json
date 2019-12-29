@@ -1,0 +1,9 @@
+{
+"TOTAL_MEMORY": 268435456,
+"dataUrl": "PCWebAlpha.data.unityweb",
+"asmCodeUrl": "PCWebAlpha.asm.code.unityweb",
+"asmMemoryUrl": "PCWebAlpha.asm.memory.unityweb",
+"asmFrameworkUrl": "PCWebAlpha.asm.framework.unityweb",
+"splashScreenStyle": "Dark",
+"backgroundColor": "#222C36"
+}

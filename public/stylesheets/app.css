@@ -1,0 +1,101 @@
+
+/*This is the style for the home page
+*/
+
+#banner {
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+#strip {
+    display: inline-block;
+    width: 100%;
+    text-transform: uppercase;
+    color: #104098;
+    font-weight: 500
+}
+
+.inline-list li {
+    display: inline-block
+}
+
+body {
+  width: 80%;
+  margin: 0 auto;
+  max-width: 700px;  
+  background-image: url("banner.png"); 
+}
+
+
+#page {
+	width: 100%
+  text-align: left;
+  margin: auto;
+}
+
+
+.intro{
+	color: #104098;
+}
+
+
+#RunwayPhoto{
+	width: 50%;
+    min-width: 25%;
+    max-width: 50%;
+    /*margin: 0 auto;
+    margin-top: 0px;
+    margin-right: auto;
+    margin-bottom: 0px;
+    margin-left: auto;*/
+}
+
+
+/*This is the style for the profile page
+*/
+
+#Page2 {
+	  display: block;
+	  width: 80%;
+	  margin: 0 auto;
+	  max-width: 700px;   
+	  text-align: center;
+}
+
+
+#selfie{
+	display: block;
+	width: 35%;
+    margin: 0 auto;
+}
+
+li, p, h1, h2, h3, h4, h5, h6 {
+	color: #104098;
+}
+
+.block-title {
+	color: #104098;
+}
+
+div h4 {
+	color: #104098;
+	text-align: left;
+}
+
+.myList {
+	list-style-type: none;
+}
+
+/*This is the style for the profile page
+*/
+
+#Page3 {
+	  display: block;
+	  width: 80%;
+	  margin: 0 auto;
+	  max-width: 700px;   
+	  text-align: center;
+}
+
+
