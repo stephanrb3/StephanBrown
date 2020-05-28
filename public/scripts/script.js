@@ -461,9 +461,29 @@ function ExpandSkill18()
     }
 }	
 
-function ExpandSkill20() 
+function ExpandSkill19() 
 {
 	var x = document.getElementById('graphql');
+    if (x.style.display && x.style.display !== 'none') {
+        x.style.display = 'none';
+    } else {
+        x.style.display = 'block';
+    }
+}	
+
+function ExpandSkill20() 
+{
+	var x = document.getElementById('airflow');
+    if (x.style.display && x.style.display !== 'none') {
+        x.style.display = 'none';
+    } else {
+        x.style.display = 'block';
+    }
+}	
+
+function ExpandSkill21() 
+{
+	var x = document.getElementById('cicd');
     if (x.style.display && x.style.display !== 'none') {
         x.style.display = 'none';
     } else {
