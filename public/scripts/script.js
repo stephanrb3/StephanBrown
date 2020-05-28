@@ -448,3 +448,25 @@ function ExpandSkill17()
         x.style.display = 'block';
     }
 }	
+
+
+
+function ExpandSkill18() 
+{
+	var x = document.getElementById('docker');
+    if (x.style.display && x.style.display !== 'none') {
+        x.style.display = 'none';
+    } else {
+        x.style.display = 'block';
+    }
+}	
+
+function ExpandSkill20() 
+{
+	var x = document.getElementById('graphql');
+    if (x.style.display && x.style.display !== 'none') {
+        x.style.display = 'none';
+    } else {
+        x.style.display = 'block';
+    }
+}	
