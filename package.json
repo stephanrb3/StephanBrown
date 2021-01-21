@@ -28,7 +28,7 @@
     "jsonstream": "^1.0.3",
     "newsapi": "^2.4.0",
     "node-fetch": "^2.6.0",
-    "socket.io": "^2.3.0",
+    "socket.io": "^2.4.0",
     "throng": "^4.0.0"
   },
   "devDependencies": {
